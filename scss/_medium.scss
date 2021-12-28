@@ -1,0 +1,35 @@
+body {display: block;}
+a.hamburger, a.close {display: none;}
+
+/*  ----------------------- NAVIGATION --------------------------- */
+nav {
+	background-color: #fff;
+	height: auto;
+	ul{
+		margin-left: 2%;
+		border:none;// undo small screen top border
+		display: flex;
+	} // end ul
+	
+	ul li {
+		border:none; // undo small screen top border
+	}
+	ul li a { 
+		padding: .9rem 1.2rem;
+		transition: color .2s linear;
+	}
+	
+
+	
+	ul li a:hover{
+		background: none; 
+		color: $primaryColor;
+	}
+	
+		ul li.active a {
+		color: white;
+		background-color: $primaryColor;
+		border-radius: 10px;
+    } // end of active
+	
+} // end nav

@@ -1,0 +1,12 @@
+//  ----------------------- NAVIGATION ---------------------------
+
+nav {
+	// on the next line try flex-end and center
+	ul {justify-content: flex-end;}
+	ul li {flex-basis: auto;}
+	
+	ul li a {
+		font-size: .9rem;
+	}// end anchor
+} // end nav
+

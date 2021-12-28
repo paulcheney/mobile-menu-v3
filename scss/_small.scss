@@ -1,0 +1,98 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*  apply a natural box layout model to all elements  */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+/* BODY  */
+body {
+	font-family: $defaultFont;
+	font-size: 16px;
+	font-weight: $lightWeight;
+    min-width: 320px;
+	display: grid;
+	grid-template-rows: auto;
+
+}
+
+/* HEADER  */
+header {
+	grid-row-start: 2;
+	padding: 1rem 2vw;
+	background-image: url("../images/header-image.jpg");
+	background-size: cover;
+	margin-bottom: .5rem;
+	h1 {font-size: 1.6rem;}
+	h2 {font-size: 1.2rem;}
+} // end header
+
+button.hamburger {grid-row-start: 1;}
+
+/*  ----------------------- NAVIGATION --------------------------- */
+a.hamburger, a.close {
+	display: block;
+	font-size: 2.5rem;
+	color: white;
+	text-decoration: none;
+	background-color: $primaryColor;
+	padding: .4rem 2vw;
+} // end skip links
+
+nav {
+	grid-row-start: 5;
+	height: 100vh;
+	background-color: $menuColor;
+	
+    ul { 
+		margin:0; 
+		padding: 0;
+		border-top: 1px solid rgba(0,0,0,0.1);
+	}
+	
+    ul li {
+		list-style-type: none;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+	} //end ul li
+    
+    ul li a {
+        display: block;
+        text-align: center;
+        font-weight: $heavyWeight;
+        padding: .9rem 0;
+        color: rgba(0,0,0,0.8);
+        text-decoration: none;  
+    } // end of anchors
+    
+	 
+	 ul li.active a {
+        background-color: darken($menuColor, 8%);
+    } // end of active
+	
+	ul li a:hover{background-color: darken($menuColor, 4%);}
+	
+} // end nav
+
+
+
+
+
+
+
+/* MAIN  */
+main {
+	grid-row-start: 3;
+ 	p {padding: .5rem 2vw;}
+	h1 {padding: .5rem 2vw; font-size: 2rem; color: $primaryColor;}
+} // end main
+
+
+/* FOOTER  */
+footer {
+	grid-row-start: 4;
+	background-color: black; 
+	padding: 1rem 0;
+	color: #eee;
+	text-align: center;
+	a{color: #eee;}
+}
